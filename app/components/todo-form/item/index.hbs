@@ -1,0 +1,31 @@
+<li class="row">
+  <label for={{@todo.id}} class="checkbox">
+    <input
+      type="checkbox"
+      name={{@todo.id}}
+      id={{@todo.id}}
+      checked={{@todo.isComplete}}
+      onchange={{fn this.completeTodo}}
+    />
+    <span>
+      {{@todo.label}}
+    </span>
+  </label>
+  {{#if @todo.tags}}
+    <div class="tag-list">
+      {{#each @todo.tags as |tag|}}
+        <div class="tag-wrapper">
+          <span>
+            {{tag.label}}
+          </span>
+          <button class="btn-delete">
+            X
+          </button>
+        </div>
+      {{/each}}
+      <button class="btn-add">
+        + Tag
+      </button>
+    </div>
+  {{/if}}
+</li>
