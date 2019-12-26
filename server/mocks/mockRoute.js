@@ -1,11 +1,14 @@
 /*jshint node:true*/
+const todosMock = require("../data/todosMock");
+
 module.exports = function(app) {
   let express = require("express");
-  let systemRouter = express.Router();
+  let router = express.Router();
+  const { todos } = todosMock;
 
-  systemRouter.get("/", function(req, res) {
-    res.send([]);
+  router.get("/", function(req, res) {
+    res.send(todos);
   });
 
-  app.use("/todos/", systemRouter);
+  app.use("/todos/", router);
 };

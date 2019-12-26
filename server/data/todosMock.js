@@ -47,4 +47,4 @@ const todos = [
   }
 ];
 
-export default todos;
+module.exports = { todos };
