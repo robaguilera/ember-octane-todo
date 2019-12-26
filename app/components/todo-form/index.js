@@ -12,9 +12,6 @@ export default class TodoFormComponent extends Component {
     this.todos = JSON.parse(JSON.stringify(todos)) || [];
   }
 
-  @tracked
-  todos;
-
   @action
   saveTodo(draftTodo) {
     const { todos } = this;

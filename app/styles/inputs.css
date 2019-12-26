@@ -39,6 +39,7 @@
   left: 0.5rem;
   top: 0.2rem;
   font-size: 20px;
+  pointer-events: none;
 }
 
 .checkbox > input:active {

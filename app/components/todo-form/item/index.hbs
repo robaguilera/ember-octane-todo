@@ -5,7 +5,7 @@
       name="completeTodo"
       id={{@todo.id}}
       checked={{@todo.isComplete}}
-      onchange={{fn this.completeTodo}}
+      onChange={{fn this.completeTodo}}
     />
     <span></span>
   </label>
@@ -16,7 +16,6 @@
         name="label"
         placeholder="What would you like to get done?"
         value={{@todo.label}}
-        onchange={{fn this.completeTodo}}
       />
     </label>
     {{#if @todo.tags}}
