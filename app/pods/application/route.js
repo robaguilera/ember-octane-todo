@@ -8,15 +8,27 @@ export default class ApplicationRoute extends Route {
   }
   async loadTodos() {
     let todos;
+
     try {
       const { data } = await axios.get("/todos");
       todos = data;
     } catch (error) {
-      console.log(error);
       todos = [];
     }
+
     return todos;
   }
   @action
-  saveTodo() {}
+  async updateTodos(draftTodos) {
+    let todos;
+
+    try {
+      const { data } = await axios.post("/todos", { todos: draftTodos });
+      todos = data;
+    } catch (error) {
+      todos = [];
+    }
+
+    this.controller.model.todos = todos;
+  }
 }

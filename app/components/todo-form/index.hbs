@@ -4,7 +4,7 @@
   </h2>
   <ul>
     {{#each this.todos as |todo|}}
-      <TodoForm::Item @todo={{todo}} />
+      <TodoForm::Item @todo={{todo}} @saveTodo={{this.saveTodo}}/>
     {{/each}}
   </ul>
 </div>
