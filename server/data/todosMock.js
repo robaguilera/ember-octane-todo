@@ -43,7 +43,8 @@ const todos = [
   {
     id: 4,
     label: "Email Rick",
-    isComplete: false
+    isComplete: false,
+    tags: []
   }
 ];
 
